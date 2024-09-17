@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        background-color:palevioletred;
+    }
+    .header{
+        text-align: center;
+    }
+    h1{
+        padding-top: 20px;
+    }
+    .btn{
+        background-color: rgb(155, 155, 240);
+        color: black;
+        border-radius: 30% 30% 30% 30%;
+    }
+    script{
+        text-align: center;
+    }
+</style>
+
+<body>
+    <div class="header">
+    <h1>Welcome to the personalised greeting app</h1>
+    <button class="btn" onclick="greeting()">User Greetings</button>
+    <p id="display-content"></p>
+    </div>
+</body>
+<script>
+    function greeting(){
+        let name=prompt("Enter your name");
+        let age=prompt("Enter your age");
+
+        if(age>18)
+        {
+            document.getElementById("display-content").innerHTML=`Welcome ${name} You are eligible.`;
+        }
+        else if(age<18)
+        {
+            document.getElementById("display-content").innerHTML=`Sorry! ${name} not eligible.`;
+        }
+    }
+</script>
+</html>
